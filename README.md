@@ -18,3 +18,5 @@ Stabilire il vincitore, in base a chi fa il punteggio più alto.
 1. Generare un numero random da 1 a 6 per due volte e assegnarne uno al giocatore e uno al computer
 2. Condizione per cui il numero maggiore vince
 3. Stampare il vincitore in console e nel DOM
+
+**Ho aggiunto un bonus: il gioco dei dati funziona soltanto se la mail inserita è valida!**

@@ -1,5 +1,5 @@
 //////////////////////////////////Mail//////////////////////////////////
-let isValidEmail;
+let isValidEmail = false;
 
 //email utente
 const userMail = prompt('Scrivi la tua email');
@@ -9,17 +9,9 @@ const whiteList = ['pincopallo@gmail.com', 'pallopinco@libero.it', 'ugodeughi@gm
 
 //logica email consentita
 for (let i = 0; i < whiteList.length; i++) {
+  
+  if (userMail === whiteList[i]){
 
-  console.log(whiteList[i]);
-  
-  if (userMail !== whiteList[i]){
-  
-    console.log('Email ' + userMail + ' errata - Vietato l\'accesso');
-    isValidEmail = false;
-    
-  } else {
-    
-    console.log('Bentornato ' + userMail + '!');
     isValidEmail = true;
   
   }
@@ -27,19 +19,19 @@ for (let i = 0; i < whiteList.length; i++) {
 
 if (isValidEmail) {
 
-  document.querySelector('h1').innerHTML = 'Errato';
+  document.querySelector('h1').innerHTML = `
+  Bentornato ${userMail}!
+  `;
   
 } else {
   
-  document.querySelector('h1').innerHTML = 'Giusto';
+  document.querySelector('h1').innerHTML = `
+  ${userMail} non è un'email valida!
+  `;
 
 }
 
 
 
-
-
-
-
-
 //////////////////////////////////Gioco dei Dadi//////////////////////////////////
+

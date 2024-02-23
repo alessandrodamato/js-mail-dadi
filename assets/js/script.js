@@ -1,4 +1,5 @@
-//Mail
+//////////////////////////////////Mail//////////////////////////////////
+let isValidEmail;
 
 //email utente
 const userMail = prompt('Scrivi la tua email');
@@ -14,10 +15,31 @@ for (let i = 0; i < whiteList.length; i++) {
   if (userMail !== whiteList[i]){
   
     console.log('Email ' + userMail + ' errata - Vietato l\'accesso');
+    isValidEmail = false;
     
   } else {
     
     console.log('Bentornato ' + userMail + '!');
+    isValidEmail = true;
   
   }
 }
+
+if (isValidEmail) {
+
+  document.querySelector('h1').innerHTML = 'Errato';
+  
+} else {
+  
+  document.querySelector('h1').innerHTML = 'Giusto';
+
+}
+
+
+
+
+
+
+
+
+//////////////////////////////////Gioco dei Dadi//////////////////////////////////
